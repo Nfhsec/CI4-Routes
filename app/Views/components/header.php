@@ -175,15 +175,15 @@
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
+              <h6><?= esc(session()->get('username') ?? 'Pengguna') ?></h6>
+              <span><?= esc(session()->get('role') ?? '-') ?></span>
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="<?= site_url('profile') ?>">
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
               </a>
@@ -193,7 +193,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="<?= site_url('profile') ?>">
                 <i class="bi bi-gear"></i>
                 <span>Account Settings</span>
               </a>
@@ -203,7 +203,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+              <a class="dropdown-item d-flex align-items-center" href="<?= site_url('profile') ?>">
                 <i class="bi bi-question-circle"></i>
                 <span>Need Help?</span>
               </a>
@@ -213,7 +213,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="logout">
+              <a class="dropdown-item d-flex align-items-center" href="<?= site_url('logout') ?>">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
